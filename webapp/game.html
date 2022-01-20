@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>end</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="head">
+    <game-head></game-head>
+</div>
+
+<div id="dyn">
+    <ul id="rr">
+        <li @click='switchCurr("tableEx")'>Kill</li>
+        <li @click='switchCurr("example")'>Stage </li>
+        <li @click='switchCurr("addPart")'> Add</li>
+        <li @click='switchCurr("Alliance")'> Alliance</li>
+    </ul>
+
+    <component :is="current"></component>
+</div>
+<script src="resources/js/game.js"></script>
+
+</body>
+</html>
